@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "private": true,
-  "scripts":{
-    "dev":"next",
+  "scripts": {
+    "dev": "next",
     "build": "next build && sls deploy",
     "start": "next start"
   },
   "dependencies": {
     "cross-env": "5.0.5",
+    "express": "^4.17.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

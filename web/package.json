@@ -4,9 +4,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build && sls deploy",
-    "start": "next start"
+    
+    "build": "next build",
+    "deploy": "next build && sls deploy"
+    
   },
   "dependencies": {
     "cross-env": "5.0.5",

@@ -1,5 +1,5 @@
 
-
+//index.js
 
 function Home(){
     return <div>Welcome to NExt.js!</div>

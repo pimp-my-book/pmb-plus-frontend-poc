@@ -3,6 +3,9 @@
 .vscode/
 .expo/
 .netlify
+.next/
+.serverless
+secrets.json
 
 node_modules/
 build/

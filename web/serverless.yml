@@ -22,12 +22,15 @@ functions:
 plugins:
   - serverless-apigw-binary
   #- serverless-domain-manager
+  - serverless-offline
 
 custom:
   secrets: ${file(secrets.json)}
   apigwBinary:
     types:
       - '*/*'
+  serverless-offline:
+    port: 4000
   #customDomain:
    #domainName: ${self:custom.secrets.DOMAIN}
     #basePath: ''

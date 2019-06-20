@@ -5,6 +5,6 @@
   "repository": "https://github.com/pimp-my-book/goa-landing-page.git",
   "author": "amodinho <u14284783@tuks.co.za>",
   "license": "None",
-  "private": true,
-  "workspaces":["web", "kiosk"]
+  "private": true
+  
 }

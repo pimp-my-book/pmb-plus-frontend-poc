@@ -21,7 +21,7 @@ functions:
 
 plugins:
   - serverless-apigw-binary
-  - serverless-domain-manager
+  #- serverless-domain-manager
 
 custom:
   secrets: ${file(secrets.json)}

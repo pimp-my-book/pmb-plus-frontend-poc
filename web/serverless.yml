@@ -13,6 +13,8 @@ provider:
 functions:
   server:
     handler: index.server
+    environment:
+      SLS_DEBUG: true
     events:
       - http: ANY /
       - http: ANY /{proxy+}

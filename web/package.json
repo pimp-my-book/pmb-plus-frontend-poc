@@ -21,7 +21,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "serverless-nextjs-plugin": "^2.0.7-alpha.0",
+    "serverless-nextjs-plugin": "^1.5.3",
     "serverless-offline": "^5.3.3"
   }
 }

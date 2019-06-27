@@ -12,7 +12,7 @@ provider:
 
 
 plugins:
-  - serverless-apigw-binary
+  #- serverless-apigw-binary
   - serverless-nextjs-plugin
   #- serverless-domain-manager
   #- serverless-offline

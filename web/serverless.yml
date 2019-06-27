@@ -1,5 +1,7 @@
 service: pmb-plus-ssr-poc
 
+plugins:
+  - serverless-nextjs-plugin
 
 
 provider:
@@ -11,8 +13,8 @@ provider:
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
 
 
-plugins:
-  - serverless-nextjs-plugin
+
+
 
 package:
   exclude:

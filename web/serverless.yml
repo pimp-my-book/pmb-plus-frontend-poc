@@ -10,25 +10,24 @@ provider:
   environment: 
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
 
-functions:
-  server:
-    handler: index.server
-    environment:
-      SLS_DEBUG: true
-    events:
-      - http: ANY /
-      - http: ANY /{proxy+}
 
 plugins:
   - serverless-apigw-binary
+  - serverless-nextjs-plugin
   #- serverless-domain-manager
   #- serverless-offline
 
+package:
+  exclude:
+    - ./**
+
 custom:
   secrets: ${file(secrets.json)}
-  apigwBinary:
-    types:
-      - '*/*'
+  serverless-nextjs:
+    nextConfigDir: ./
+  #apigwBinary:
+    #types:
+     # - '*/*'
   #serverless-offline:
     #port: 4000
   #customDomain:

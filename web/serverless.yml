@@ -21,8 +21,13 @@ functions:
 
 plugins:
   - serverless-apigw-binary
+  - serverless-nextjs-plugin
   #- serverless-domain-manager
   #- serverless-offline
+
+package:
+  exclude:
+    - ./**
 
 custom:
   secrets: ${file(secrets.json)}

@@ -10,8 +10,7 @@ provider:
   runtime: nodejs8.10
   stage: dev
   region: us-east-1
-  environment: 
-    NODE_ENV: dev
+  
 
 
 
@@ -22,7 +21,6 @@ package:
     - ./**
 
 custom:
-  secrets: ${file(secrets.json)}
   serverless-nextjs:
     nextConfigDir: ./
   #apigwBinary:

@@ -2,7 +2,7 @@ service: pmb-plus-ssr-poc
 
 frameworkVersion: "1.35.1"
 plugins:
-  - serverless-nextjs-plugin
+- serverless-nextjs-plugin
 
 
 provider:

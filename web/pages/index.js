@@ -1,8 +1,9 @@
 
 //index.js
+import App from './App'
 
-function Home(){
-    return <div>Welcome to NExt.js!</div>
+export default () => {
+    <App>
+        <h1>Hello NextJS</h1>
+    </App>
 }
-
-export default Home;

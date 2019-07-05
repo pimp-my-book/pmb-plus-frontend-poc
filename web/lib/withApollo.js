@@ -9,7 +9,7 @@ import ApolloClient from 'apollo-boost';
 
 function createClient({headers}) {
     return new ApolloClient({
-        uri: process.env.NODE_ENV === 'development' ? endpoint : prodEndpoint,
+        uri: process.env.NODE_ENV === 'development' ? endpoint : devEndpoint,
         headers
     });
 

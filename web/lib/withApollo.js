@@ -8,7 +8,7 @@ import initApollo from './initApollo'
 import Head from 'next/head'
 import {getDataFromTree} from 'react-apollo'
 
-export default AApp => {
+export default App => {
     return class Apollo extends React.Component {
         static displayName = 'withApollo(App)'
         static async getInitialProps (ctx){

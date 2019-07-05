@@ -2,7 +2,7 @@
 import {ApolloClient, InMemoryCache, HttpLink} from 'apollo-boost'
 import fetch from 'isomorphic-fetch'
 
-let ApolloClient = null
+let apolloClient = null
 
 function create (initialState){
     const isBrowser = typeof window !== 'undefined'

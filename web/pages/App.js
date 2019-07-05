@@ -1,4 +1,4 @@
-export default ({children}) => {
+export default ({children}) => (
     <main>
         {children}
         <style jsx global>
@@ -16,4 +16,4 @@ export default ({children}) => {
         `}
         </style>
     </main>
-}
+)

@@ -18,3 +18,17 @@ function create (initialState){
     })
 }
 
+export default function initApollo (initialState){
+    //This creates a new client for every server side request
+    //so data aint shared between connections
+    if (typeof window === 'undefined'){
+        return create(initialState)
+    }
+
+    //reuse client on client-side
+    if(!apolloClient){
+        apolloClient = create(initialState)
+    }
+
+    return apolloClient
+}

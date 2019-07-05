@@ -10,6 +10,13 @@ import {endpoint, devEndpoint} from '../config';
 function createClient({headers}) {
     return new ApolloClient({
         uri: process.env.NODE_ENV === 'development' ? endpoint : devEndpoint,
+        request: operation => {
+            operation.setContext({
+                fetchOptions: {
+                    credentials: 'include'
+                }
+            })
+        },
         headers
     });
 

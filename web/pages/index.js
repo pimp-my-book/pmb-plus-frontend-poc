@@ -8,7 +8,7 @@ import gql from 'graphql-tag'
 
 
  const HelloQuery = gql`
-  query HelloQuery {
+  {
       hello
   }
 `

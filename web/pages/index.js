@@ -5,7 +5,12 @@ import App from './App'
 import withApollo from '../lib/withApollo'
 import {Query} from 'react-apollo'
 import gql from 'graphql-tag'
+import getConfig from 'next/config'
 
+
+const {serverRuntimeConfig} = getConfig()
+
+console.log(serverRuntimeConfig)
 
  const HelloQuery = gql`
   {

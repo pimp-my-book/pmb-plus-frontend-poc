@@ -1,7 +1,10 @@
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
 import fetch from 'isomorphic-unfetch'
+import getConfig from 'next/config'
+const {serverRuntimeConfig} = getConfig()
 
 let apolloClient = null
+
 const stage = process.env.REACT_APP_STAGE === "prod";
 
 function create (initialState) {

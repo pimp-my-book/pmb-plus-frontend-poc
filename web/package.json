@@ -27,6 +27,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
     "serverless-nextjs-plugin": "^1.5.3",
     "serverless-offline": "^5.3.3"
   }

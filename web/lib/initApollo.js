@@ -1,7 +1,6 @@
 import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost'
 import fetch from 'isomorphic-unfetch'
-import getConfig from 'next/config'
-const {serverRuntimeConfig} = getConfig()
+import {endpoint, devEndpoint} from '../config'
 
 let apolloClient = null
 
@@ -14,7 +13,7 @@ function create (initialState) {
     connectToDevTools: isBrowser,
     ssrMode: !isBrowser, // Disables forceFetch on the server (so queries are only run once)
     link: new HttpLink({
-      uri: process.env.API_ENDPOINTS, // Server URL (must be absolute)
+      uri: process.env.NODE_ENV === 'development' ? endpoint : devEndpoint, // Server URL (must be absolute)
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       // Use fetch() polyfill on the server
       fetch: !isBrowser && fetch

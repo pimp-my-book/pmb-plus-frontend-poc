@@ -61,7 +61,12 @@ class Page extends Component {
     render(){
         return (
             <ThemeProvider theme={theme}>
-             <GloabalStyle/>
+            <React.Fragment>
+            {this.props.children}
+            <GloabalStyle/>
+            </React.Fragment>
+           
+             
             </ThemeProvider>
             
                   

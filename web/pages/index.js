@@ -14,7 +14,7 @@ import styled from 'styled-components'
 `
 
 const Test = styled.h1`
-color: #ED0677
+color: theme.color.pink
 `
 
 class Home extends Component {
@@ -33,7 +33,7 @@ class Home extends Component {
                  
                  return(
                     
-                    <Test>{data.hello}</Test>
+                    <h1>{data.hello}</h1>
                    
                  )
              }}

@@ -5,7 +5,7 @@ import App from './App'
 import withApollo from '../lib/withApollo'
 import {Query} from 'react-apollo'
 import gql from 'graphql-tag'
-
+import styled from 'styled-components'
 
  const HelloQuery = gql`
   {
@@ -13,9 +13,16 @@ import gql from 'graphql-tag'
   }
 `
 
+const Test = styled.h1`
+color: #1b335f
+`
+
 class Home extends Component {
 
+    
+
     render(){
+       
         return (
             <App>
             <Query query={HelloQuery}>
@@ -26,12 +33,13 @@ class Home extends Component {
                  
                  return(
                     
-                    <h1>{data.hello}</h1>
+                    <Test>{data.hello}</Test>
                    
                  )
              }}
             </Query>
-             </App>
+            </App>
+             
         )
     }
 }

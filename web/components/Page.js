@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import styled, {ThemeProvider, injectGlobal} from 'styled-components'
+import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
 
 
 const theme = {
@@ -40,7 +40,7 @@ const theme = {
 
 
 
-injectGlobal`
+const GloabalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Kanit|Rubik+Mono+One&display=swap');
 
        h1,h2,h3{
@@ -55,18 +55,17 @@ injectGlobal`
             margin: 0;
         }
 
-`
+`;
 
 class Page extends Component {
     render(){
         return (
             <ThemeProvider theme={theme}>
-             <StyledPage>
-                  <Meta/>
-                  <Header/>
-                  <Inner>{this.props.children}</Inner>
-             </StyledPage>
+             <GloabalStyle/>
             </ThemeProvider>
+            
+                  
+                
         )
     }
 }

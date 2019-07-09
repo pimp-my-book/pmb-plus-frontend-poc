@@ -24,7 +24,7 @@ class Home extends Component {
     render(){
        
         return (
-            <App>
+           
             <Query query={HelloQuery}>
              {({loading, error, data}) =>{
                  console.log(data)
@@ -38,7 +38,7 @@ class Home extends Component {
                  )
              }}
             </Query>
-            </App>
+            
              
         )
     }

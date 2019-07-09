@@ -3,11 +3,16 @@ export default ({children}) => (
         {children}
         <style jsx global>
         {`
-        *{
-            font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-            'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',
-            monospace, serif;
-        }
+
+@import url('https://fonts.googleapis.com/css?family=Kanit|Rubik+Mono+One&display=swap');
+
+       h1,h2,h3{
+        font-family: 'Rubik Mono One', sans-serif;
+       }
+
+       p { 
+        font-family: 'Kanit', sans-serif;
+       }
 
         body {
             margin: 0;

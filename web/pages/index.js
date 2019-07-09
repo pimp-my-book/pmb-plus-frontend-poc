@@ -14,7 +14,7 @@ import styled from 'styled-components'
 `
 
 const Test = styled.h1`
-color: #1b335f
+color: #ED0677
 `
 
 class Home extends Component {

@@ -6,7 +6,7 @@ import withApollo from '../lib/withApollo'
 import {Query} from 'react-apollo'
 import gql from 'graphql-tag'
 import styled from 'styled-components'
-
+import PrimaryButton from '../components/styles/buttons/PrimaryButton'
  const HelloQuery = gql`
   {
       hello

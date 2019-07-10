@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
-
+import NavigationBar from './styles/NavigationBar'
 
 const theme = {
     pinkDarkest: '#ED0677',
@@ -61,6 +61,7 @@ class Page extends Component {
     render(){
         return (
             <ThemeProvider theme={theme}>
+            <NavigationBar/>
             <React.Fragment>
             {this.props.children}
             <GloabalStyle/>

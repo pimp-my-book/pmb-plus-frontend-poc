@@ -13,12 +13,14 @@ const NavbarStyles = styled(Navbar)`
 
 const NavigationBar = ({
     expand,
+   
     ...props
 }) => {
     return(
         <NavbarStyles
         expand="lg"
         {...props}>
+        <Navbar href="/">PMB Plus</Navbar>
         </NavbarStyles>
     )
 }

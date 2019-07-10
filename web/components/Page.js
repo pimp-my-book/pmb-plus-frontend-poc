@@ -61,8 +61,9 @@ class Page extends Component {
     render(){
         return (
             <ThemeProvider theme={theme}>
-            <NavigationBar/>
+            
             <React.Fragment>
+            <NavigationBar/>
             {this.props.children}
             <GloabalStyle/>
             </React.Fragment>

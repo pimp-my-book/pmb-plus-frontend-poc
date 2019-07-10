@@ -3,18 +3,18 @@ import styled from "styled-components";
 
 
 const PrimaryButtonStyles = styled.button`
-font-family: 'Poppins', sans-serif;
-color: var(--rasin-black);
-background-color: var(--rose-pink);
-border: ${props => props.border ? '2px solid var(--rose-pink)' : 'none'} ;
-width: ${props => props.small ? '100px' : '180px'};
+font-family: 'Kanit', sans-serif
+color: ${props => props.theme.white};
+background-color: ${props => props.theme.pinkDarkest};
+width: 160px;
 font-size: 20px;
-padding: 2px;
+border-radius: 5px;
+
 :hover {
- background-color: var(--rose-pink);
- color: var(--linen);
+ background-color: ${props => props.theme.white};
+ color: ${props => props.theme.pinkDarkest}
    }
-   border: 1px solid var(--rose-pink);
+   border: 1px solid ${props => props.theme.pinkDarkest};
 }
 
 

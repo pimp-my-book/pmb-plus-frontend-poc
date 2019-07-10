@@ -39,6 +39,9 @@ const theme = {
 
 }
 
+const LogoStyles = styled.img`
+    margin-top: 10px;
+`
 
 
 const GloabalStyle = createGlobalStyle`
@@ -66,7 +69,7 @@ class Page extends Component {
             <React.Fragment>
             <NavigationBar>
                 <Navbar.Brand href="/">
-                <img
+                <LogoStyles
                 alt="pmb_plus"
                 src="https://pmb-traimages.s3.amazonaws.com/pmb_plus_logo.svg"
                 width="133"

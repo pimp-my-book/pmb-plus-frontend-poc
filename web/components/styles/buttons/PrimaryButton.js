@@ -19,3 +19,20 @@ border-radius: 5px;
 
 
 `
+
+const PrimaryButton = ({
+    onClick,
+    text,
+    ...props
+}) =>{
+    return (
+        <PrimaryButtonStyles
+        onClick={onClick}
+        {...props}>
+        {text}
+        </PrimaryButtonStyles>
+    )
+}
+
+
+export default PrimaryButton 

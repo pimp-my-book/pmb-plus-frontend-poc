@@ -4,7 +4,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "run": "next",
+    "offline": "next",
     "build": "next build",
     "deploy": "next build && sls deploy"
   },

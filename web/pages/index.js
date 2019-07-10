@@ -1,8 +1,48 @@
 
 //index.js
+import React, {Component} from 'react'
+import App from './App'
+import withApollo from '../lib/withApollo'
+import {Query} from 'react-apollo'
+import gql from 'graphql-tag'
+import styled from 'styled-components'
 
-function Home(){
-    return <div>Welcome to NExt.js!</div>
+ const HelloQuery = gql`
+  {
+      hello
+  }
+`
+
+const Test = styled.h1`
+color: ${props => props.theme.pink}
+`
+
+class Home extends Component {
+
+    
+
+    render(){
+       
+        return (
+           
+            <Query query={HelloQuery}>
+             {({loading, error, data}) =>{
+                 console.log(data)
+                 if (loading) return <p>loading</p>;
+                 if (error) return <p>error</p>;
+                 
+                 return(
+                    
+                    <Test>{data.hello}</Test>
+                   
+                 )
+             }}
+            </Query>
+            
+             
+        )
+    }
 }
+
 
 export default Home;

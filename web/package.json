@@ -4,23 +4,32 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "run": "next",
+    "offline": "next",
     "build": "next build",
     "deploy": "next build && sls deploy"
   },
   "dependencies": {
+    "apollo-boost": "^0.4.3",
+    "bootstrap": "^4.3.1",
     "cross-env": "5.0.5",
     "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "isomorphic-fetch": "^2.2.1",
     "next": "^8.1.0",
+    "next-with-apollo": "^3.4.0",
     "path-match": "^1.2.4",
     "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
     "serverless-apigw-binary": "^0.4.4",
     "serverless-domain-manager": "^3.2.2",
     "serverless-http": "^2.0.2",
+    "styled-components": "^4.3.2",
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
     "serverless-nextjs-plugin": "^1.5.3",
     "serverless-offline": "^5.3.3"
   }

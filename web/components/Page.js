@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
 import NavigationBar from './styles/NavigationBar'
+import {Navbar, Nav} from 'react-bootstrap'
 
 const theme = {
     pinkDarkest: '#ED0677',
@@ -63,7 +64,9 @@ class Page extends Component {
             <ThemeProvider theme={theme}>
             
             <React.Fragment>
-            <NavigationBar/>
+            <NavigationBar>
+                <Navbar.Brand href="/">PMB Plus</Navbar.Brand>
+            </NavigationBar>
             {this.props.children}
             <GloabalStyle/>
             </React.Fragment>

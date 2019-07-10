@@ -6,6 +6,7 @@ const NavbarStyles = styled(Navbar)`
 &&&{
     background-color: ${props => props.theme.blueDarkest};
     border-top: ${props => props.theme.pinkDarkest} 8px solid;
+    height: 100px;
 }
 
 `

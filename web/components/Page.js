@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
 import NavigationBar from './styles/NavigationBar'
+import Footer from './styles/Footer'
 import {Navbar, Nav} from 'react-bootstrap'
 
 const theme = {
@@ -79,6 +80,7 @@ class Page extends Component {
             </NavigationBar>
             {this.props.children}
             <GloabalStyle/>
+            <Footer/>
             </React.Fragment>
            
              

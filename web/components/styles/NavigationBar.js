@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import {NavBar} from 'react-bootstrap'
+import {Navbar} from 'react-bootstrap'
 
-const NavbarStyles = styled(NavBar)`
+const NavbarStyles = styled(Navbar)`
 &&&{
     background-color: ${props => props.theme.blueDarkest};
     border-top: ${props => props.theme.pinkDarkest} 8px solid;

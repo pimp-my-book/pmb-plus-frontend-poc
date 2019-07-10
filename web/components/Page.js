@@ -65,7 +65,14 @@ class Page extends Component {
             
             <React.Fragment>
             <NavigationBar>
-                <Navbar.Brand href="/">PMB Plus</Navbar.Brand>
+                <Navbar.Brand href="/">
+                <img
+                alt="pmb_plus"
+                src="https://pmb-traimages.s3.amazonaws.com/pmb_plus_logo.svg"
+                width="133"
+                height="64"
+                />
+                </Navbar.Brand>
             </NavigationBar>
             {this.props.children}
             <GloabalStyle/>

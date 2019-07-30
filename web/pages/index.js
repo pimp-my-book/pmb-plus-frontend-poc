@@ -30,9 +30,20 @@ class Home extends Component {
                  if (error) return <p>error</p>;
                  
                  return(
+                    
                     <>
-                    <BookCard
+                     {data.map(books =>(
+                         <div key={books.ID}>
+
+                        <BookCard
+                    cardImg={book.image}
+                    bookTitle={book.title}
+                    bookPrice={book.price}
+                    bookGrade={book.grade}
                     />
+                         <div/>
+                        ))}
+                   
                   
                    </>
                  )

@@ -9,6 +9,11 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 5px;
 `
 
+const CardImage = styled.img`
+height: 150px;
+width:330px;
+`
+
 const BookCard = ({
     text,
     cardImg,
@@ -19,7 +24,7 @@ const BookCard = ({
     return(
         <BookCardStyles>
             <div>
-                <img
+                <CardImage
                 src={cardImg}
                 />
             </div>

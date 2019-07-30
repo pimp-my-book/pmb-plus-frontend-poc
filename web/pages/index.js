@@ -7,12 +7,8 @@ import {Query} from 'react-apollo'
 import gql from 'graphql-tag'
 import styled from 'styled-components'
 import BookCard from '../components/styles/cards/BookCard'
-
- const HelloQuery = gql`
-  {
-      hello
-  }
-`
+import {GET_ALL_BOOKS} from '../graphql/Queries'
+ 
 
 const Test = styled.h1`
 color: ${props => props.theme.pink}
@@ -26,7 +22,7 @@ class Home extends Component {
        
         return (
            
-            <Query query={HelloQuery}>
+            <Query query={GET_ALL_BOOKS}>
             
              {({loading, error, data}) =>{
                  console.log(data)

@@ -5,7 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 const FooterStyles = styled.footer`
 height: 100px;
 width: 100%;
-position: absolute;
+position: relative;
 bottom: 0;
 left:0;
 background-color: ${props => props.theme.blueDarkest};

@@ -6,6 +6,8 @@ import withApollo from '../lib/withApollo'
 import {Query} from 'react-apollo'
 import gql from 'graphql-tag'
 import styled from 'styled-components'
+import BookCard from '../components/styles/cards/BookCard'
+
  const HelloQuery = gql`
   {
       hello
@@ -33,7 +35,8 @@ class Home extends Component {
                  
                  return(
                     <>
-                    <Test>{data.hello}</Test>
+                    <BookCard
+                    />
                   
                    </>
                  )

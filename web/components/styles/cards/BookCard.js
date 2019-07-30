@@ -18,6 +18,16 @@ const BookCard = ({
 }) => {
     return(
         <BookCardStyles>
+            <div>
+                <img
+                src={cardImg}
+                />
+            </div>
+            <div>
+                {bookTitle}
+                {bookPrice}
+                {bookGrade}
+            </div>
 
         </BookCardStyles>
     )

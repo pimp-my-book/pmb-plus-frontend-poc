@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import BodyText from "../typography/BodyText";
+import HeadingThree from "../typography/HeadingThree"
+
+
 
 const BookCardStyles = styled.div`
 height: 450px;

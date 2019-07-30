@@ -20,7 +20,7 @@ width:330px;
 `
 const CardGrid = styled.div`
 display:grid;
-grid-template-rows: repeat(3, 1fr);
+grid-template-rows: repeat(3, 0.25fr);
 `
 
 const BookCard = ({

@@ -32,21 +32,22 @@ class Home extends Component {
                  return(
                     
                     <>
-                     {data.map(books =>(
+                     {data.getAllBooks.map(books =>(
                          <div key={books.ID}>
 
                         <BookCard
-                    cardImg={book.image}
-                    bookTitle={book.title}
-                    bookPrice={book.price}
-                    bookGrade={book.grade}
+                    cardImg={books.image}
+                    bookTitle={books.title}
+                    bookPrice={books.price}
+                    bookGrade={books.grade}
                     />
-                         <div/>
+                         </div>
                         ))}
                    
                   
                    </>
                  )
+                
              }}
             </Query>
             

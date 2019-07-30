@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
-
+import NavigationBar from './styles/NavigationBar'
+import Footer from './styles/Footer'
+import {Navbar, Nav} from 'react-bootstrap'
 
 const theme = {
     pinkDarkest: '#ED0677',
@@ -38,6 +40,9 @@ const theme = {
 
 }
 
+const LogoStyles = styled.img`
+    margin-top: 10px;
+`
 
 
 const GloabalStyle = createGlobalStyle`
@@ -61,9 +66,21 @@ class Page extends Component {
     render(){
         return (
             <ThemeProvider theme={theme}>
+            
             <React.Fragment>
+            <NavigationBar>
+                <Navbar.Brand href="/">
+                <LogoStyles
+                alt="pmb_plus"
+                src="https://pmb-traimages.s3.amazonaws.com/pmb_plus_logo.svg"
+                width="133"
+                height="64"
+                />
+                </Navbar.Brand>
+            </NavigationBar>
             {this.props.children}
             <GloabalStyle/>
+            <Footer/>
             </React.Fragment>
            
              

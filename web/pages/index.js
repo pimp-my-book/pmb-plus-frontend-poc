@@ -6,7 +6,6 @@ import withApollo from '../lib/withApollo'
 import {Query} from 'react-apollo'
 import gql from 'graphql-tag'
 import styled from 'styled-components'
-
  const HelloQuery = gql`
   {
       hello
@@ -26,15 +25,17 @@ class Home extends Component {
         return (
            
             <Query query={HelloQuery}>
+            
              {({loading, error, data}) =>{
                  console.log(data)
                  if (loading) return <p>loading</p>;
                  if (error) return <p>error</p>;
                  
                  return(
-                    
+                    <>
                     <Test>{data.hello}</Test>
-                   
+                  
+                   </>
                  )
              }}
             </Query>

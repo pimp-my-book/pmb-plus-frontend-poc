@@ -16,3 +16,24 @@ query GET_ALL_BOOKS{
     }
 }
 `
+
+
+export const GET_ONE_BOOK = gql`
+query GET_ONE_BOOK($ID:String){
+    getOneBook(ID:$ID){
+        ID
+        price
+        image
+        title
+        author
+        ISBN
+        edition
+        grade
+        vendor
+
+    }
+
+}
+
+
+`

@@ -17,6 +17,10 @@ const CardImage = styled.img`
 height: 150px;
 width:330px;
 `
+const CardGrid = styled.div`
+display:grid;
+grid-template-rows: repeat(3, 1fr);
+`
 
 const BookCard = ({
     text,
@@ -32,11 +36,14 @@ const BookCard = ({
                 src={cardImg}
                 />
             </div>
-            <div>
-                {bookTitle}
-                {bookPrice}
-                {bookGrade}
-            </div>
+
+            <CardGrid>
+           <HeadingThree>{bookTitle}</HeadingThree>
+           <BodyText>{bookPrice}</BodyText>
+           <BodyText>{bookGrade}</BodyText>
+              
+                
+            </CardGrid>
 
         </BookCardStyles>
     )

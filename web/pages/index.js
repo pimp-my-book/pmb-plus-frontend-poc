@@ -10,8 +10,10 @@ import BookCard from '../components/styles/cards/BookCard'
 import {GET_ALL_BOOKS} from '../graphql/Queries'
  
 
-const Test = styled.h1`
-color: ${props => props.theme.pink}
+const BookGrid = styled.div`
+display: grid;
+grid-template-columns: repeat(auto-fit,340px);
+
 `
 
 class Home extends Component {
@@ -31,7 +33,7 @@ class Home extends Component {
                  
                  return(
                     
-                    <>
+                    <BookGrid>
                      {data.getAllBooks.map(books =>(
                          <div key={books.ID}>
 
@@ -45,7 +47,7 @@ class Home extends Component {
                         ))}
                    
                   
-                   </>
+                   </BookGrid>
                  )
                 
              }}

@@ -15,10 +15,7 @@ border-radius: 5px;
  color: ${props => props.theme.pinkDarkest}
    }
    border: 1px solid ${props => props.theme.pinkDarkest};
-}
-
-
-`
+}`;
 
 const PrimaryButton = ({
     onClick,
@@ -35,4 +32,4 @@ const PrimaryButton = ({
 }
 
 
-export default PrimaryButton 
+export default PrimaryButton; 

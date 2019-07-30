@@ -12,7 +12,9 @@ import {GET_ALL_BOOKS} from '../graphql/Queries'
 
 const BookGrid = styled.div`
 display: grid;
+grid-gap: 25px;
 grid-template-columns: repeat(auto-fit,340px);
+align-items:center
 
 `
 

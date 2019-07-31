@@ -8,7 +8,7 @@ export default class SingleBook extends Component{
             <Query
             query={GET_ONE_BOOK}
             variables={{
-                ID: this.props.ID
+                ID: this.props.id
             }}>
             {({error, loading, data}) =>{
                 if(error) return <p>Something Went wrong</p>;

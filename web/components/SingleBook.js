@@ -1,14 +1,20 @@
 import React, {Component} from 'react'
 import {GET_ONE_BOOK} from '../graphql/Queries'
 import {Query} from 'react-apollo'
+import {useRouter} from 'next/router'
 
-export default class SingleBook extends Component{
-    render(){
+const  SingleBook = () =>{
+
+
+        const router = useRouter()
+        const {id} = router.query
+        console.log(id)
+        
         return(
             <Query
             query={GET_ONE_BOOK}
             variables={{
-                ID: this.props.id
+                ID: parseInt(id)
             }}>
             {({error, loading, data}) =>{
                 if(error) return <p>Something Went wrong</p>;
@@ -33,4 +39,5 @@ export default class SingleBook extends Component{
             </Query>
         )
     }
-}
+
+    export default SingleBook

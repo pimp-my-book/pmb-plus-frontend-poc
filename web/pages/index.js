@@ -40,10 +40,9 @@ class Home extends Component {
                          <div key={books.ID}>
                          
                        <Link
-                       href={{
-                           pathname: '/viewBook',
-                           query: {id: books.ID}
-                       }}>{books.title }</Link>
+                       href='/viewBook/[ID]'
+                       as={`/viewBook/${books.ID}`}
+                       >{books.title }</Link>
                         
                   
                          </div>

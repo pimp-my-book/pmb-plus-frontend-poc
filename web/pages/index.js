@@ -8,7 +8,7 @@ import gql from 'graphql-tag'
 import styled from 'styled-components'
 import BookCard from '../components/styles/cards/BookCard'
 import {GET_ALL_BOOKS} from '../graphql/Queries'
-import Link from 'next/Link'
+import Link from 'next/link'
 
 const BookGrid = styled.div`
 display: grid;
@@ -38,18 +38,14 @@ class Home extends Component {
                     <BookGrid>
                      {data.getAllBooks.map(books =>(
                          <div key={books.ID}>
+                         
                        <Link
                        href={{
                            pathname: '/viewBook',
                            query: {id: books.ID}
-                       }}>
-                        <BookCard
-                    cardImg={books.image}
-                    bookTitle={books.title}
-                    bookPrice={books.price}
-                    bookGrade={books.grade}
-                    />
-                    </Link>
+                       }}>{books.title }</Link>
+                        
+                  
                          </div>
                         ))}
                    
@@ -67,3 +63,13 @@ class Home extends Component {
 
 
 export default Home;
+
+/*
+<BookCard
+                    cardImg={books.image}
+                    bookTitle={books.title}
+                    bookPrice={books.price}
+                    bookGrade={books.grade}
+                    />
+
+*/

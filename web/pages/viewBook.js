@@ -1,8 +1,10 @@
 import SingleBook from '../components/SingleBook'
 
-const viewBook = () => (
+const viewBook = (props) => (
     <div>
-        <SingleBook/>
+        <SingleBook
+        id={props.query.ID}
+        />
     </div>
 )
 

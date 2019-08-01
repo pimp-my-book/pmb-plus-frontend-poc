@@ -32,15 +32,22 @@ const  SingleBook = () =>{
                 const book = data.getOneBook
                 return (
                     <ProductGrid>
-                    <HeadingTwo>{book.title}</HeadingTwo>
-                    {book.vendor}
-                    {book.price}
+                    <div>
+
                     {book.image}
 
                     {book.author}
                     {book.ISBN}
                     {book.edition}
                     {book.grade}
+                    </div>
+                    <div>
+
+                        
+                        <HeadingTwo>{book.title}</HeadingTwo>
+                    {book.vendor}
+                    {book.price}
+                    </div>
                     </ProductGrid>
                     
                 )

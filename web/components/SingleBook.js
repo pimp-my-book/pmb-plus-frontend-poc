@@ -15,6 +15,10 @@ const  SingleBook = () =>{
     
     `
 
+    const ProductImg = styled.img`
+      width: 200px;
+      height: 300px;
+    `
         const router = useRouter()
         const {id} = router.query
         console.log(id)
@@ -34,8 +38,10 @@ const  SingleBook = () =>{
                     <ProductGrid>
                     <div>
 
-                    {book.image}
-
+                    <ProductImg
+                    
+                    src={book.image}
+                    />
                     {book.author}
                     {book.ISBN}
                     {book.edition}

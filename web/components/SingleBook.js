@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {GET_ONE_BOOK} from '../graphql/Queries'
 import {Query} from 'react-apollo'
 import {useRouter} from 'next/router'
+import HeadingTwo from '../components/styles/typography/HeadingOne'
+import BodyText from '../components/styles/typography/BodyText'
 
 const  SingleBook = () =>{
 

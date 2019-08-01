@@ -42,17 +42,29 @@ const  SingleBook = () =>{
                     
                     src={book.image}
                     />
-                    {book.author}
-                    {book.ISBN}
-                    {book.edition}
-                    {book.grade}
+                    <BodyText>Author:{book.author}</BodyText>
+                    <BodyText>ISBN:{book.ISBN}</BodyText>
+                    
+                    <BodyText> edition: {book.edition}</BodyText>
+                    
+                    <BodyText>Grade: {book.grade}</BodyText>
+                    
+                    
+                   
+                   
                     </div>
                     <div>
 
                         
                         <HeadingTwo>{book.title}</HeadingTwo>
-                    {book.vendor}
-                    {book.price}
+                    
+                    
+
+                    <BodyText> ZAR {book.price}</BodyText>
+
+                    <BodyText> Who is Selling it? {book.vendor}</BodyText>
+
+                    
                     </div>
                     </ProductGrid>
                     

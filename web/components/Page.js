@@ -66,7 +66,10 @@ const GloabalStyle = createGlobalStyle`
 class Page extends Component {
     render(){
         return (
+        
             <ThemeProvider theme={theme}>
+            
+            <React.Fragment>
             <Head>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
@@ -74,7 +77,6 @@ class Page extends Component {
 
 <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
             </Head>
-            <React.Fragment>
             <NavigationBar>
                 <Navbar.Brand href="/">
                 <LogoStyles
@@ -93,7 +95,7 @@ class Page extends Component {
              
             </ThemeProvider>
             
-                  
+                 
                 
         )
     }

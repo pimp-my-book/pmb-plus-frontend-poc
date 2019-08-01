@@ -64,7 +64,16 @@ const  SingleBook = () =>{
 
                     <BodyText> Who is Selling it? {book.vendor}</BodyText>
 
-                    
+                    <button
+                    className="snipcart-add-item"
+                    data-item-id={book.ID}
+                    data-item-name={book.title}
+                    data-item-price={book.price}
+                    data-item-url={router.pathname}
+                    data-item-image={book.image}
+                    >
+                       Add to cart 
+                    </button>
                     </div>
                     </ProductGrid>
                     

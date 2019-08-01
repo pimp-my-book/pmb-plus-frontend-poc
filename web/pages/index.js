@@ -6,14 +6,16 @@ import withApollo from '../lib/withApollo'
 import {Query} from 'react-apollo'
 import gql from 'graphql-tag'
 import styled from 'styled-components'
- const HelloQuery = gql`
-  {
-      hello
-  }
-`
+import BookCard from '../components/styles/cards/BookCard'
+import {GET_ALL_BOOKS} from '../graphql/Queries'
+import Link from 'next/link'
 
-const Test = styled.h1`
-color: ${props => props.theme.pink}
+const BookGrid = styled.div`
+display: grid;
+grid-gap: 25px;
+grid-template-columns: repeat(auto-fit,340px);
+justify-content:center
+
 `
 
 class Home extends Component {
@@ -24,7 +26,7 @@ class Home extends Component {
        
         return (
            
-            <Query query={HelloQuery}>
+            <Query query={GET_ALL_BOOKS}>
             
              {({loading, error, data}) =>{
                  console.log(data)
@@ -32,11 +34,24 @@ class Home extends Component {
                  if (error) return <p>error</p>;
                  
                  return(
-                    <>
-                    <Test>{data.hello}</Test>
+                    
+                    <BookGrid>
+                     {data.getAllBooks.map(books =>(
+                         <div key={books.ID}>
+                         
+                       <Link
+                       href='/viewBook/[ID]'
+                       as={`/viewBook/${books.ID}`}
+                       >{books.title }</Link>
+                        
                   
-                   </>
+                         </div>
+                        ))}
+                   
+                  
+                   </BookGrid>
                  )
+                
              }}
             </Query>
             
@@ -47,3 +62,13 @@ class Home extends Component {
 
 
 export default Home;
+
+/*
+<BookCard
+                    cardImg={books.image}
+                    bookTitle={books.title}
+                    bookPrice={books.price}
+                    bookGrade={books.grade}
+                    />
+
+*/

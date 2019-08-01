@@ -4,9 +4,16 @@ import {Query} from 'react-apollo'
 import {useRouter} from 'next/router'
 import HeadingTwo from '../components/styles/typography/HeadingOne'
 import BodyText from '../components/styles/typography/BodyText'
+import styled from 'styled-components'
 
 const  SingleBook = () =>{
 
+    const ProductGrid = styled.div`
+      display: grid;
+      grid-template-columns: repeat(2, 3fr);
+      grid-gap: 10px;
+    
+    `
 
         const router = useRouter()
         const {id} = router.query
@@ -24,8 +31,8 @@ const  SingleBook = () =>{
                 if (!data) return <p>No Book found for this item</p>;
                 const book = data.getOneBook
                 return (
-                    <div>
-                    {book.title}
+                    <ProductGrid>
+                    <HeadingTwo>{book.title}</HeadingTwo>
                     {book.vendor}
                     {book.price}
                     {book.image}
@@ -34,7 +41,7 @@ const  SingleBook = () =>{
                     {book.ISBN}
                     {book.edition}
                     {book.grade}
-                    </div>
+                    </ProductGrid>
                     
                 )
             }}

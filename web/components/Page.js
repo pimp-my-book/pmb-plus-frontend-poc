@@ -3,6 +3,7 @@ import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
 import NavigationBar from './styles/NavigationBar'
 import Footer from './styles/Footer'
 import {Navbar, Nav} from 'react-bootstrap'
+import Head from "next/head"
 
 const theme = {
     pinkDarkest: '#ED0677',
@@ -65,9 +66,17 @@ const GloabalStyle = createGlobalStyle`
 class Page extends Component {
     render(){
         return (
+        
             <ThemeProvider theme={theme}>
             
             <React.Fragment>
+            <Head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YTBiNGNjM2ItOTZlMS00OTNhLTkzMDktY2I0NjlhMjJjOGJlNjM2OTk5OTA2MzQzMzczMDEw"></script>
+
+<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+            </Head>
             <NavigationBar>
                 <Navbar.Brand href="/">
                 <LogoStyles
@@ -86,7 +95,7 @@ class Page extends Component {
              
             </ThemeProvider>
             
-                  
+                 
                 
         )
     }

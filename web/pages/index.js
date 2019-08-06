@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import BookCard from '../components/styles/cards/BookCard'
 import {GET_ALL_BOOKS} from '../graphql/Queries'
 import Link from 'next/link'
-
+import dynamic from 'next/dynamic'
 const BookGrid = styled.div`
 display: grid;
 grid-gap: 25px;
@@ -17,7 +17,7 @@ grid-template-columns: repeat(auto-fit,340px);
 justify-content:center
 
 `
-
+//const DynamicPrim = dynamic(import(PrimaryButton))
 class Home extends Component {
 
     
@@ -36,6 +36,7 @@ class Home extends Component {
                  return(
                     
                     <BookGrid>
+                        
                      {data.getAllBooks.map(books =>(
                          <div key={books.ID}>
                          

@@ -1,5 +1,6 @@
 const  {PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD} = require ('next/constants')
-
+const withTM = require('next-transpile-modules')
+const withCSS = require('@zeit/next-css')
 
 module.exports = phase => {
     //get the dev stage
@@ -24,3 +25,19 @@ module.exports = phase => {
     }
 
 }
+
+module.exports = withCSS({
+    cssModules: true,
+   target: 'serverless',
+   webpack (config){
+       config.module.rules.push({
+           test:/\.css$/i,
+           use:['style-loader','css-loader']
+       })
+       return config
+   }
+})
+
+module.exports = withTM({
+    transpileModules: ['umqombothi-component-library']
+})
